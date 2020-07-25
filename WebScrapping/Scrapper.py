@@ -1,9 +1,4 @@
-from bs4 import BeautifulSoup
-import requests
-import selenium
-import chromedriver_binary
 from selenium import webdriver as wb
-import ExcelWriter as writer
 menuitme="div.menu__list li.d-flex>div>div.d-flex a>span"
 pricelist="div.menu__list li.d-flex div.menu__price>span:nth-of-type(3)"
 AllitemLis=[]
@@ -29,5 +24,5 @@ for x in range(resturantCount):
     price.append('*')
 
     driver.back()
-writer.CreateWorkBook(name,item,price)
+
 
